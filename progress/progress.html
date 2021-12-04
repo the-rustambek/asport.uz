@@ -1,141 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset=utf-8 />
-    <title>Morris.js Area Chart</title>
-    <style>
-        #area-chart,
-        #line-chart,
-        #bar-chart,
-        #stacked,
-        #pie-chart {
-            min-height: 250px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js">
 </head>
 
 <body>
-    <h3 class="text-primary text-center">
-        Morris js charts
-    </h3>
-    <div class="row">
-        <div class="col-sm-6 text-center">
+    <div class="header">
+        <div class="container"style="width:1140px;margin:0 auto;">
+            <div class=""style="width: 420px;
+            height: 280px;">
+                <canvas id="myChart" style="width: 420px;
+                height: 280px;" class="chart ms-4 ps-4">
 
-        </div>
-        <div class="col-sm-6 text-center">
-            <label class="label label-success">Line Chart</label>
-            <div id="line-chart"></div>
-        </div>
-        <div class="col-sm-6 text-center">
-            <label class="label label-success">Bar Chart</label>
-            <div id="bar-chart"></div>
-        </div>
-        <div class="col-sm-6 text-center">
-            <label class="label label-success">Bar stacked</label>
-            <div id="stacked"></div>
-        </div>
-        <div class="col-sm-6 col-sm-offset-3 text-center">
-            <label class="label label-success">Pie Chart</label>
-            <div id="pie-chart"></div>
-        </div>
 
+                </canvas>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+        integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        var data = [{
-                    y: '2014',
-                    a: 50,
-                    b: 90
-                },
-                {
-                    y: '2015',
-                    a: 65,
-                    b: 75
-                },
-                {
-                    y: '2016',
-                    a: 50,
-                    b: 50
-                },
-                {
-                    y: '2017',
-                    a: 75,
-                    b: 60
-                },
-                {
-                    y: '2018',
-                    a: 80,
-                    b: 65
-                },
-                {
-                    y: '2019',
-                    a: 90,
-                    b: 70
-                },
-                {
-                    y: '2020',
-                    a: 100,
-                    b: 75
-                },
-                {
-                    y: '2021',
-                    a: 115,
-                    b: 75
-                },
-                {
-                    y: '2022',
-                    a: 120,
-                    b: 85
-                },
-                {
-                    y: '2023',
-                    a: 145,
-                    b: 85
-                },
-                {
-                    y: '2024',
-                    a: 160,
-                    b: 95
+        
+        let firstChart = document.getElementById('myChart').getContext('2d');
+
+        let barChart = new Chart(firstChart, {
+            type: 'bar',
+            data: {
+                labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                datasets: [{
+                    barPercentage: 0.5,
+                    barThickness: 15,
+                    maxBarThickness: 20,
+                    minBarLength: 2,
+                    label: "Revenue",
+                    borderRadius: 500,
+                    data: [
+                        400,
+                        500,
+                        300,
+                        240,
+                        700,
+                        600,
+                        700
+                    ],
+                    backgroundColor: "#F86549"
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Guests',
+                        fontSize: 30
+                    },
                 }
-            ],
-            config = {
-                data: data,
-                xkey: 'y',
-                ykeys: ['a', 'b'],
-                labels: ['Total Income', 'Total Outcome'],
-                fillOpacity: 0.6,
-                hideHover: 'auto',
-                behaveLikeLine: true,
-                resize: true,
-                pointFillColors: ['#ffffff'],
-                pointStrokeColors: ['black'],
-                lineColors: ['gray', 'red']
-            };
-        config.element = 'area-chart';
-        Morris.Area(config);
-        config.element = 'line-chart';
-        Morris.Line(config);
-        config.element = 'bar-chart';
-        Morris.Bar(config);
-        config.element = 'stacked';
-        config.stacked = true;
-        Morris.Bar(config);
-        Morris.Donut({
-            element: 'pie-chart',
-            data: [{
-                    label: "Friends",
-                    value: 30
-                },
-                {
-                    label: "Allies",
-                    value: 15
-                },
-                {
-                    label: "Enemies",
-                    value: 45
-                },
-                {
-                    label: "Neutral",
-                    value: 10
-                }
-            ]
+            }
+        })
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#image-slider').mount();
         });
     </script>
 </body>
+
+</html>
