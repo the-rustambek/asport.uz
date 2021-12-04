@@ -1,0 +1,212 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Silent Reaction';
+    src: url('./assets/fonts/SilentReaction.woff2') format('woff2'),
+        url('./assets/fonts/SilentReaction.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    display: inline-block;
+}
+
+body {
+    display: flex;
+    font-family: serif;
+    background: linear-gradient(to right, #c9c9c9, #f0f0f0 40%,#f0f0f0 50%,#b4b4b4 80%);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    width: 6%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #b63c46;
+}
+
+.sidebar_title {
+    margin-top: auto;
+    margin-bottom: auto;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.main {
+    display: flex;
+    width: 94%;
+    height: 100vh;
+}
+
+.bar_button {
+    background-color: transparent;
+    border: none;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+    padding-left: 80px;
+    justify-content: center;
+}
+
+.content_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.brand_name {
+    font-family: "Silent Reaction";
+    font-size: 40px;
+    color: #B63C46;
+    margin-top: auto;
+}
+
+.subtext {
+    width: 60%;
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-size: 34px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.info {
+    font-family: 'Roboto';
+    margin-top: 16px;
+    width: 50%;
+    line-height: 1.4;
+}
+
+.cart_to_button {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: #B63C46;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.cart_to_button span {
+    margin-right: 10px;
+}
+
+.cart_to_button img {
+    width: 15px;
+}
+
+.social_list {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+
+.social_item {
+    margin: 4px 7px;
+}
+
+.social_img {
+    width: 20px;
+}
+
+.content_img {
+    position: absolute;
+    width: 50%;
+    right: -30px;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    width: 40%;
+    height: 100vh;
+}
+
+.products_item {
+    display: flex;
+    align-items: center;
+}
+
+.products_item + .active {
+    padding-left: 50px;
+}
+
+.active .boots_content {
+    display: block;
+}
+
+.active {
+    transition: 0.4s;
+    padding-left: 50px;
+}
+
+.sekin {
+    transition: 0.4s;
+}
+
+.boots_content {
+    display: none;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.boots_name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.boots_info {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.price_bold {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.boots_button {
+    border: none;
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0;
+}

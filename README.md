@@ -1,2 +1,2 @@
-# asport.uz
+# sport.uz
  

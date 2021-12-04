@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: blueviolet;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    transform: scale(1.2);
+}
+
+.header{
+    /* background-color: blueviolet;    */
+}
+.header-img{
+    width: 390px;
+    height: 200px;
+    transition: 0.3s;
+    
+}
+.headers-items{
+    /* border: 3px solid blueviolet; */
+    border-radius: 10px;
+
+}
+.header-img:hover{
+    transform: scale(0.9);
+}
+.header-title{
+    width: 350px;
+}
+
+.header-flex{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+}
+
+.header-list{
+    width: 32%;
+    /* background-color:gold; */
+    /* border: 2px solid red; */
+    /* background-color: blueviolet; */
+    padding: 10px;
+
+background-color: whitesmoke;
+border-radius: 5px;
+}
+
+
+.header-list:hover{
+    /* background-color: blueviolet; */
+    /* color: white; */
+
+}
+.header-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-money{
+    border-radius: 5px;
+    border: 3px solid blueviolet;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: white;
+    color: blueviolet;
+    transition: 0.9s;
+}
+.header-money:hover{
+    transform: rotate(360deg);
+}
+
+.header-btn{
+    padding: 5px;
+    background-color: blueviolet;
+    color: white;
+    border: 2px solid blueviolet;
+    width: 160px;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+  
+}
+.header-btn:hover{
+    background-color: white;
+    color: blueviolet;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************** search ****************** */
+
+
+
+.search{
+    padding: 50px;
+}
+
+.search-title{
+    color: whitesmoke;
+
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.search-form{
+    margin-top: 50px;
+}
+
+
+.search-select{
+    width: 220px;
+    padding: 8px;
+    border-radius: 5px;
+    margin:0px 15px 0px 0px;
+}
+.search-header{
+    padding: 50px;
+    padding-bottom: 0px;
+}
+.search-btn{
+    padding: 5px;
+border: 2px solid blueviolet;
+width: 230px;
+background-color: white;  
+color: blueviolet;
+font-size: 18px;
+border-radius: 5px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.search-btn:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+
+  }
+  table{
+    width:100%;
+    table-layout: fixed;
+  }
+  .tbl-header{
+    background-color: rgba(255,255,255,0.3);
+   }
+  .tbl-content{
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+  }
+  
+  
+  /* demo styles */
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+  body{
+    background: -webkit-linear-gradient(left, blueviolet, blueviolet);
+    background: linear-gradient(to right, blueviolet,blueviolet);
+    font-family: 'Roboto', sans-serif;
+  }
+  section{
+    margin: 50px;
+  }
+  
+  
+  /* follow me template */
+  .made-with-love {
+    margin-top: 40px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+    color: #fff;
+  }
+  .made-with-love i {
+    font-style: normal;
+    color: #F50057;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+  }
+  .made-with-love a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .made-with-love a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* for custom scrollbar for webkit browser*/
+  
+  ::-webkit-scrollbar {
+      width: 6px;
+  } 
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  } 
+  ::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }
