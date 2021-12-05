@@ -46,7 +46,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-warning" href="#">Progress</a>
+              <a class="nav-link text-warning" href="../progress/progress.html">Progress</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-warning" href="#">Account</a>
@@ -57,74 +57,24 @@
 
 
 
-
- 
- 
-      <div class="header" style="padding: 50px;">
-        <div class="container"style="width:1140px;margin:0 auto">
-            <div class=""style="width: 750px;
-            height: 500px;background-color: white;padding-right:30px">
-                <canvas id="myChart" style="width: 420px;
-                height: 280px; color: wheat;" class="chart ms-4 ps-4">
-
-
-                </canvas>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
-        integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        let firstChart = document.getElementById('myChart').getContext('2d');
-
-        let barChart = new Chart(firstChart, {
-            type: 'line',
-            data: {
-                labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-                datasets: [{
-                    barPercentage: 0.5,
-                    barThickness: 15,
-                    maxBarThickness: 20,
-                    minBarLength: 2,
-                    label: "Revenue",
-                    borderRadius: 500,
-                    data: [
-                        400,
-                        500,
-                        300,
-                        240,
-                        700,
-                        600,
-                        700
-                    ],
-                    backgroundColor: "red"
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Guests',
-                        fontSize: 30
-                    },
-                }
-            }
-        })
+      <section class="section">
+          <div class="conntainer">
+              <ul class="section-list">
+                  <li class="section-item">
+                      <img src="../" alt="" class="section-img">
+                  </li>
+              </ul>
+          </div>
+      </section>
 
 
 
 
 
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#image-slider').mount();
-        });
-    </script>
+
+
+
+      
 
     
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
