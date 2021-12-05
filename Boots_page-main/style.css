@@ -27,9 +27,12 @@ a {
 }
 
 body {
-    display: flex;
+    
     font-family: serif;
     background: linear-gradient(to right, #c9c9c9, #f0f0f0 40%,#f0f0f0 50%,#b4b4b4 80%);
+}
+.collect{
+    display: flex;
 }
 
 .sidebar {
